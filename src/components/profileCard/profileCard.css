@@ -1,22 +1,44 @@
+:root {
+  --card-width: 250px;
+  --card-height: 250px;
+  --card-padding: 2.5rem;
+  --card-radius: 16px;
+  --card-bg: #ffffff;
+  --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+  --flex-column: column;
+  --align-center: center;
+  --text-center: center;
+
+  --image-size: 150px;
+  --image-radius: 50%;
+  --image-margin: 0 auto 1rem;
+
+  --name-font-size: 1.2rem;
+  --name-margin: 0.5rem 0 0.25rem;
+  --position-font-size: 0.95rem;
+  --position-color: #666;
+}
+
 .profile-card {
-  flex-direction: column;
   display: flex;
-  height: 250px;
-  background: white;
-  border-radius: 16px;
-  padding: 2.5rem;
-  text-align: center;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  width: 250px;
-  align-items: center;
-  justify-content: center;
+  flex-direction: var(--flex-column);
+  align-items: var(--align-center);
+  justify-content: var(--align-center);
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: var(--card-padding);
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  text-align: var(--text-center);
 }
 
 .profile-card__image {
-  width: 150px;
-  height: 150px;
-  margin: 0 auto 1rem;
-  border-radius: 50%;
+  width: var(--image-size);
+  height: var(--image-size);
+  margin: var(--image-margin);
+  border-radius: var(--image-radius);
   overflow: hidden;
 }
 
@@ -27,11 +49,11 @@
 }
 
 .profile-card__name--text {
-  font-size: 1.2rem;
-  margin: 0.5rem 0 0.25rem;
+  font-size: var(--name-font-size);
+  margin: var(--name-margin);
 }
 
 .profile-card__position--text {
-  font-size: 0.95rem;
-  color: #666;
+  font-size: var(--position-font-size);
+  color: var(--position-color);
 }
